@@ -17,3 +17,4 @@ To install a different version of Node.js, you can use a PPA (personal package a
   3. When you are satisfied that the script is safe to run, exit your editor, then run the script with sudo: `sudo bash /tmp/nodesource_setup.sh`
   4. The PPA will be added to your configuration and your local package cache will be updated automatically. You can now install the Node.js package in the same way you did in the previous section: `sudo apt install nodejs`
   5. Verify that you’ve installed the new version by running node with the -v version flag: `node -v`
+  6. PM2 is a production process manager for Node.js applications with a built-in load balancer. It allows you to keep applications alive forever, to reload them without downtime and to facilitate common system admin tasks. `sudo npm install pm2 -g`
