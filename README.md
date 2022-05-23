@@ -18,3 +18,15 @@ To install a different version of Node.js, you can use a PPA (personal package a
   4. The PPA will be added to your configuration and your local package cache will be updated automatically. You can now install the Node.js package in the same way you did in the previous section: `sudo apt install nodejs`
   5. Verify that you’ve installed the new version by running node with the -v version flag: `node -v`
   6. PM2 is a production process manager for Node.js applications with a built-in load balancer. It allows you to keep applications alive forever, to reload them without downtime and to facilitate common system admin tasks. `sudo npm install pm2 -g`
+
+## [Install Google Chrome](https://tecadmin.net/install-google-chrome-in-ubuntu/)
+  1. add (if not added already) the Google Chrome repository on your system using the following command. While using PPA to our system we also receive the latest updates whenever you check for system updates. `wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -`
+  2. create a PPA file for Google chrome on your system by running command `sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' `
+  3. After adding the Google Chrome repository in our system use following commands to install the latest Google Chrome stable release. If you already have installed an older version, It will upgrade the currently installed version with the recent stable version. `sudo apt-get update ` & `sudo apt-get install google-chrome-stable ` When prompted for confirmation, Press ‘y’ and hit enter to complete Google chrome installation.
+
+## [Install ChromeDriver](https://tecadmin.net/setup-selenium-chromedriver-on-ubuntu/)
+  1. Find out the Google chrome version installed on your system. `google-chrome --version `
+  2. Next, visit the [Chromedriver download page](https://chromedriver.chromium.org/downloads) and download the matching version of chromedriver on your system.
+  3. In my case, Google chrome `101.0.4951.41` is running on my system. So download the following file. You must make sure to download the correct version of a file: `wget https://chromedriver.storage.googleapis.com/101.0.4951.41/chromedriver_linux64.zip`
+  4. Unzip the downloaded file `unzip chromedriver_linux64.zip`
+  5. You can find the latest ChromeDriver on its [official download page](https://sites.google.com/a/chromium.org/chromedriver/downloads). Now execute below commands to configure ChromeDriver on your system. `sudo mv chromedriver /usr/bin/chromedriver`, `sudo chown root:root /usr/bin/chromedriver`, `sudo chmod +x /usr/bin/chromedriver`
